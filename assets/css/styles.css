@@ -7,12 +7,16 @@ html {
     font-size: 62.5%;
 }
 
+:root {
+    --font-heading: 'Sen', sans-serif;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-    font-family: 'Sen', sans-serif;
+    font-family: var(--font-heading);
 }
 
 body {
@@ -28,6 +32,7 @@ html {
 /* ===========common========== */
 a {
     text-decoration: none;
+    color: #FFF;
 }
 
 .content {
@@ -42,14 +47,13 @@ a {
     display: inline-block;
     width: 118px;
     min-width: 118px;
-    padding: 0px 13px;
     border-radius: 999px;
     background: #FFB900;
     text-align: center;
     color: #FFF;
     font-size: 1.6rem;
     font-weight: 600;
-
+    padding: 16px 13px;
 }
 
 button {
@@ -96,10 +100,13 @@ button {
 }
 
 .body-nav .navbar li .item-link:hover {
-    color: #d0cdc7;
+    text-shadow: 1px 0 0 currentColor;
+    color: #171100;
 }
 
 .body-nav .navbar li .item-link-home {
+    padding: 2px 21px;
+
     position: relative;
     color: #171100;
     text-align: center;
@@ -109,7 +116,7 @@ button {
 
 .body-nav li .item-link-home::before {
     position: absolute;
-    left: 0;
+    left: 21px;
     bottom: 0;
     content: "";
     width: 12px;
@@ -140,6 +147,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.body-hero .info {
+    width: 470px;
+    max-width: 100%;
 }
 
 .body-hero .media-block {
@@ -197,13 +209,11 @@ button {
     /* 166.667% */
 }
 
-.body-hero .info {
-    width: 470px;
-}
+
 
 .body-hero .info .title {
     color: #171100;
-    font-family: 'Sen', sans-serif;
+    font-family: var(--font-heading);
     font-size: 5.8rem;
     font-weight: 700;
     line-height: 1.17;
@@ -253,7 +263,6 @@ button {
 
 .body-hero .hero-play strong {
     color: #171100;
-    cursor: pointer;
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.6;
@@ -281,7 +290,7 @@ button {
 .body-hero .info-desc-stats strong {
     margin-right: 6px;
     color: #171100;
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-heading);
     font-size: 44px;
     font-style: normal;
     font-weight: 700;
@@ -309,9 +318,9 @@ button {
     justify-content: space-between;
 }
 
-.main-content .popular-top .deading {
+.main-content .popular-top .heading {
     color: #171100;
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-heading);
     font-size: 3.8rem;
     font-weight: 700;
     line-height: 1.26;
@@ -350,13 +359,13 @@ button {
 
 }
 
-.main-content .course-list {
+.course-list {
     margin-top: 55px;
     display: flex;
     gap: 30px;
 }
 
-.main-content .course-list .course {
+.course {
     width: 370px;
     height: 278px;
     object-fit: cover;
@@ -424,7 +433,7 @@ button {
     /* 166.667% */
 }
 
-.main-content .foot .btn-course {
+.btn-course {
     background: #000000;
     padding: 15.5px 13px;
 }
@@ -442,7 +451,6 @@ button {
 }
 
 .feedback .quote {
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -455,7 +463,7 @@ button {
 .feedback .avt .name {
     margin-top: 18px;
     color: #F7F7F7;
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 1.4;
@@ -529,7 +537,7 @@ button {
 .features .desc .title {
     color: #171100;
 
-    font-family: "Sen", sans-serif;
+    font-family: var(--font-heading);
     font-size: 3.8rem;
     font-weight: 700;
     line-height: 1.26;
@@ -552,4 +560,244 @@ button {
     width: 137px;
     padding: 15.5px 13px;
 
+}
+
+.features-2 {
+    margin-top: 200px;
+}
+
+.features-2 .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features-2 .desc {
+    width: 570px;
+}
+
+.features-2 .desc .title {
+    color: #171100;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.26;
+    /* 126.316% */
+    letter-spacing: -0.76px;
+
+}
+
+.features-2 .desc .sub-title {
+    margin-top: 16px;
+    color: #5F5B53;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    /* 175% */
+}
+
+.features-2 .body .img-features-2 {
+    width: 470px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.features-2 .desc .btn-features-2 {
+    margin-top: 32px;
+}
+
+.course-2 {
+    margin-top: 200px;
+    padding: 96px 0;
+    background: #FFFCF4;
+}
+
+.course-2 .course-top .title {
+    color: #130606;
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 3.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2;
+    /* 126.316% */
+    letter-spacing: -0.76px;
+}
+
+.course-2 .course-top .sub-title {
+    margin-top: 16px;
+    color: #696262;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    /* 175% */
+    width: 448px;
+    max-width: 100%;
+}
+
+.course-2 .course-item-2 {
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.course-2 .course-item-2 .course {
+    border-radius: 16px;
+    height: 250px;
+}
+
+.course-2 .info {
+    padding: 20px 0 28px 20px;
+}
+
+.course-2 .info .date {
+    margin-bottom: 12px;
+    padding-left: 10px;
+    position: relative;
+    color: #5F5B53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    /* 185.714% */
+}
+
+.course-2 .info .date::after {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #FFB900;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+
+.course-2 .info .title {
+    width: 330px;
+
+    margin: 12px 0;
+    position: relative;
+}
+
+.course-2 .info .title::after {
+    position: absolute;
+    content: "";
+    width: 160px;
+    height: 1px;
+    border-radius: 12px;
+    background: #E2DFDA;
+    left: 0;
+    top: -4px;
+    transform: translateY(-50%);
+}
+
+.course-2 .info .title a {
+    color: #171100;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.7;
+    /* 175% */
+}
+
+.course-2 .date .course-2 .info .date a {
+    color: #5F5B53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    /* 185.714% */
+}
+
+.course-2 .info .btn-course {
+    margin-bottom: 28px;
+}
+
+.course-2 .course-dots {
+    margin-top: 38px;
+    text-align: center;
+}
+
+/* ======footer====== */
+.footer {
+    background: #2E2100;
+    padding: 96px 0 28px;
+}
+
+.footer .row {
+    display: flex;
+}
+
+.footer .row .sub-title {
+    margin-top: 18px;
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    /* 185.714% */
+}
+
+.footer .row .icon {
+    margin-top: 18px;
+}
+
+.footer .row .icon a {
+    margin-right: 18px;
+}
+
+.footer .row .info {
+    width: 267px;
+    max-width: 100%;
+}
+
+.footer .row-item {
+    margin-left: auto;
+    display: flex;
+}
+
+.footer .item {
+    width: 91%;
+}
+
+.footer .item .footer .row-item .title {
+    position: relative;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.7;
+    /* 175% */
+}
+
+.footer .row-item .title::after {
+    position: absolute;
+    content: "";
+    width: 160px;
+    height: 1px;
+    border-radius: 12px;
+    background: #E2DFDA;
+    left: 0;
+    bottom: -14px;
+    transform: translateY(-50%);
+}
+
+.footer .row-item .list_item {
+    margin-top: 43px;
+}
+
+.footer .row-item .list_item-link {
+
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.8;
+    /* 185.714% */
+}
+
+.footer .row-item span {
+    color: #FFF;
 }
