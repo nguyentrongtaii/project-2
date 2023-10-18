@@ -54,6 +54,8 @@ a {
 }
 
 .btn {
+    transition: all ease .2s;
+
     display: inline-block;
     width: 118px;
     min-width: 118px;
@@ -461,9 +463,6 @@ button {
     padding: 15.5px 13px;
 }
 
-.main-content .foot .btn-course-edit {
-    background: #FFB900;
-}
 
 /* =====quote===== */
 .feedback {
@@ -784,6 +783,13 @@ button {
 .course-2 .info .btn-course {
     margin-bottom: 28px;
 }
+
+.btn:hover {
+    background: var(--primary-color);
+
+}
+
+.course-2 .info .btn-course:hover {}
 
 .course-2 .dots {
     margin-top: 38px;
