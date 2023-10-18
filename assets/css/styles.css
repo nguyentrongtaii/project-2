@@ -11,14 +11,6 @@ html {
     --font-heading: 'Sen', sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: var(--font-heading);
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
@@ -377,6 +369,11 @@ button {
 
 }
 
+.main-content .course-lists {
+    display: flex;
+    overflow: hidden;
+}
+
 .course-list {
     margin-top: 55px;
     display: flex;
@@ -425,9 +422,15 @@ button {
 }
 
 .main-content .course-item {
+    border: 1px solid #e2dfda;
     border-radius: 12px;
     background: #FFF;
-    box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05); */
+}
+
+.main-content .course-item:hover {
+    border-color: transparent;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .main-content .course-item .desc {
@@ -482,6 +485,7 @@ button {
     justify-content: space-between;
     align-items: center;
     transform: translateX(-100%);
+    transition: all ease .5s;
 }
 
 .feedback .avt img {
@@ -515,15 +519,20 @@ button {
     margin-top: 20px;
 }
 
-.feedback .dot {
+.dot {
     display: inline-block;
     width: 6px;
     height: 6px;
     border-radius: 50%;
     background: #634700;
+    cursor: pointer;
 }
 
-.feedback .dots .dot-yellow {
+.dot-yellow {
+    cursor: default;
+}
+
+.dots .dot-yellow {
     background: #FFB900;
 }
 
@@ -556,6 +565,7 @@ button {
 .features .body {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .features .body .avt {
@@ -652,7 +662,18 @@ button {
     margin-top: 32px;
 }
 
+.courses {
+    display: flex;
+    overflow: hidden;
+
+}
+
+
 .course-2 {
+    transform: translateX(-100%);
+    flex-shrink: 0;
+    width: 100%;
+    overflow: hidden;
     margin-top: 200px;
     padding: 96px 0;
     background: #FFFCF4;
@@ -686,11 +707,14 @@ button {
 .course-2 .course-item-2 {
     border-radius: 16px;
     background-color: #fff;
+}
+
+.course-2 .course-item-2:hover {
     box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+
 }
 
 .course-2 .course-item-2 .course {
-    border-radius: 16px;
     height: 250px;
 }
 
@@ -699,8 +723,10 @@ button {
 }
 
 .course-2 .info .date {
-    margin-bottom: 12px;
+    padding-bottom: 12px;
     padding-left: 10px;
+    display: inline-flex;
+    align-items: center;
     position: relative;
     color: #5F5B53;
     font-size: 1.4rem;
@@ -709,36 +735,34 @@ button {
     /* 185.714% */
 }
 
-.course-2 .info .date::after {
+.course-2 .info .date::before {
     position: absolute;
     content: "";
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background-color: #FFB900;
-    top: 50%;
+    background-color: #edb00a;
     left: 0;
-    transform: translateY(-50%);
 }
 
+.course-2 .info .date::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: -27px;
+
+
+    bottom: 0;
+    /* width: 160px; */
+    height: 2px;
+    border-radius: 12px;
+    background: #E2DFDA;
+
+}
 
 .course-2 .info .title {
     width: 330px;
-
     margin: 12px 0;
-    position: relative;
-}
-
-.course-2 .info .title::after {
-    position: absolute;
-    content: "";
-    width: 160px;
-    height: 1px;
-    border-radius: 12px;
-    background: #E2DFDA;
-    left: 0;
-    top: -4px;
-    transform: translateY(-50%);
 }
 
 .course-2 .info .title a {
@@ -761,7 +785,7 @@ button {
     margin-bottom: 28px;
 }
 
-.course-2 .course-dots {
+.course-2 .dots {
     margin-top: 38px;
     text-align: center;
 }
@@ -769,35 +793,84 @@ button {
 /* ======footer====== */
 .footer {
     background: #2E2100;
-    padding: 96px 0 28px;
+    padding: 96px 0 169px;
 }
 
 .footer .row {
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554B;
 }
 
-.footer .row .colum:first-child {
-    width: 22.8%;
+.footer .colum:first-child {
+    width: 35%;
 }
 
-.footer .row .colum {
-    width: 25%;
+.footer .colum:nth-child(2) {
+    width: 22%;
 }
 
-/* commom */
-.footer .item-link {
+.footer .colum:nth-child(3) {
+    width: 23%;
+}
+
+.footer .colum:nth-child(4) {
+    width: 26%;
+}
+
+.footer .desc {
+    width: 267px;
+    margin: 18px 0;
     color: #BFBCB2;
     font-size: 1.4rem;
-    font-style: normal;
     font-weight: 400;
-}
-
-/*  */
-.footer .sub-title {
-    margin: 18px 0;
     line-height: 1.85;
+    /* 185.714% */
 }
 
-.footer .icon a {
-    margin-right: 18px;
+.footer .sokials {
+    display: flex;
+    gap: 18px;
+}
+
+.footer .heading {
+    display: inline-block;
+    color: #FFF;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0 48px 14px 0;
+    border-bottom: 1px solid #59554B;
+
+}
+
+.footer .list {
+    margin-top: 28px;
+}
+
+.footer .list-item {
+    margin-top: 12px;
+}
+
+.footer .list a {
+    color: #BFBCB2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+    /* 185.714% */
+}
+
+
+
+.footer strong {
+    color: #FFF;
+}
+
+.footer .copyright p {
+    padding: 28px 0;
+    text-align: center;
+    color: #807D74;
+    font-size: 1.4rem;
+    font-weight: 400;
+    /* 185.714% */
 }
